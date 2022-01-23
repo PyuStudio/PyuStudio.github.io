@@ -1,0 +1,20 @@
+# some information about you
+name: "朴玉工作室"
+nickname: "朴玉"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, 欢迎来到"
+image: "images/main-logo.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "PyuStudio@163.com"
+  phone: "+8618521516525"
+  github: PyuStudio
+  linkedin: PyuStudio
+
+# some summary about what you do
+summary:
+  - 我们是朴玉
+  - 我们致力于嵌入式软硬件的开发
+  - 我们的硬件开发能力得到过硅谷知名科技公司的认可和赞赏
+  - C和Python是我们的主要开发语言
+  - 因为Python，全栈开发对我们也很轻松

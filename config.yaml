@@ -1,0 +1,46 @@
+baseURL: https://PyuStudio.github.io/
+languageCode: en-us
+title: Pyu Studio
+theme: "toha"
+
+# Manage languages
+# For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    contentDir: content/en
+    languageName: English
+    weight: 1
+  zh-cn:
+    contentDir: content/zh-cn
+    languageName: 简体中文
+    weight: 3
+
+# Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
+DefaultContentLanguage: zh-cn
+
+# Allow raw html in markdown file
+# Control TOC depth
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+# Enable global emoji support
+enableEmoji: true
+
+# Site parameters
+params:
+  # GitHub repo URL of your site
+  gitRepo: https://github.com/PyuStudio/PyuStudio.github.io.git
+
+  # specify whether you want to write some blog posts or not
+  enableBlogPost: true
+
+  # specify whether you want to show Table of Contents in reading page
+  enableTOC: true
+
+  # Provide newsletter configuration. This feature hasn't been implemented yet.
+  # Currently, you can just hide it from the footer.
+  newsletter:
+    enable: true
