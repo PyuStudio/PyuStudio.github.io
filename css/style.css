@@ -1,0 +1,38 @@
+.flag-icon-zh-cn {
+    background-image: url(../flags/4x3/cn.svg);
+}
+
+.post-content p{
+text-indent: 2rem; /*em是相对单位，2em即现在一个字大小的两倍*/
+font-size: 1.25rem;
+}
+
+.post-content video{
+margin-left: 2rem;
+}
+
+
+.post-content ul{
+margin-left: 3rem;
+}
+
+.post-content ol{
+margin-left: 3rem;
+}
+
+.post-content li{
+text-indent: 1rem;
+}
+
+.post-content h3{
+font-weight: 700;
+}
+
+.post-content h4{
+margin-left: 2rem;
+font-weight: 600;
+}
+
+h5{
+font-size: 1.6rem;
+}
