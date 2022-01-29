@@ -1,26 +1,31 @@
 ---
-title: "红外测温模块"
+title: "Infrared thermometer"
 date: 2021-12-27T10:06:25+08:00
 description: Sample post with multiple images, embedded video ect.
 menu:
   sidebar:
-    name: 红外测温模块
+    name: Infrared thermo-module
     identifier: elim
     parent: thermometer
     weight: 10
 hero: images/forest.jpg
 tags: ["Markdown","Content Organization","Multi-lingual"]
 categories: ["Basic"]
+summary: >
+  Infrared temperature measurement is the most common temperature measurement method in non-contact temperature measurement. Like other non-contact temperature measurement methods, it also has the advantages of fast response, wide temperature measurement range and good stability. However, this temperature measurement method is difficult to keep the high accuracy with wide temperature measurement range.
+  
+  
+  We have studied the details of the theory, and made breakthroughs in AI core algorithms, new-generation calibration system, and hardware performance improvement, and realized the products with the new solution. Our products can do temperature measurement with high accuracy in wide temperature measurement range.
 ---
 
 
-test
-### 演示视频
+
+### Demo Video
 
 {{< mp4 src="/files/KIYB6082_x264_003.mp4" height=600 width=800 >}}
 
 
-### 市场常见测温方式
+### The common ways of temperature measuring
 
 温度测量根据传感器和被测物体关系分为接触式和非接触式。
 

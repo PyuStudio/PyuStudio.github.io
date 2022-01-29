@@ -21,22 +21,44 @@ buttons:
 
 # your projects
 projects:
-- name: Kubernetes
+- name: Infrared thermo-module
   logo: /images/sections/projects/kubernetes.png
-  role: Contributor
-  timeline: "March 2018 - Present"
-  repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
+  # role: Contributor
+  # timeline: "March 2018 - Present"
+  # repo: https://github.com/kubernetes/kubernetes # If your project is a public repo on GitHub, then provide this link. it will show star count.
   #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Production-Grade Container Scheduling and Management.
+  summary: >
+    This project developed a module which is used to read the temperature object by measuring its infrared radiation. The HW of the module is based on a SOC and the programming languanges are C and Python.
+    
+    
+    Higher accuracy with broader range driving by well designed algorithm.
+    
+    
+    Costing down with latest SOC chip.
+    
+    
+    Flexable production line with new designed calibration solution. 
+    
+    
+    Easy to learn with plent of examples. 
   tags: ["professional", "kubernetes", "cloud"]
 
-- name: Tensorflow
+- name: Frequency Response Analyzer 
   logo: /images/sections/projects/tensorflow.png
-  role: Developer
-  timeline: "Jun 2018 - Present"
-  repo: https://github.com/tensorflow/tensorflow
+  # role: Developer
+  # timeline: "Jun 2018 - Present"
+  # repo: https://github.com/tensorflow/tensorflow
   #url: ""
-  summary: An Open Source Machine Learning Framework for Everyone.
+  summary: >
+    A frequency response analyzer measures the gain and phase response characteristics with respect to frequency of the device or system under test, by applying a frequency swept sine wave to it and examining its response signal.
+    
+    
+    As our customer faced the difficulty that the network was too noisy to be tested, we developed the analyzer to help them. The analyzer is a virtual instrument. The hardware is the computer peripheral developed with STM32F407 and the rest is a desktop app running on computer developed with python.
+    
+    
+    Out analyzer has higher accuracy and sensitivity than common analyzer, such as Bode100. 
+    
+    
   tags: ["professional", "machine-learning"]
 
 - name: A sample academic paper

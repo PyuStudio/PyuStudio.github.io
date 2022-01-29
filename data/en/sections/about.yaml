@@ -11,14 +11,24 @@ section:
 designation: Software Engineer
 # your company information
 company:
-  name: Example Co.
-  url: "https://www.example.com"
+  name: Pyu Studio
+  # url: "https://www.example.com"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"
 
 # a summary about you
-summary: 'I am a passionate software engineer with x years of working experience. I built OSS tools for [Kubernetes](https://kubernetes.io/) using GO. My tools help people to deploy their workloads in Kubernetes. Sometimes, I work on some fun projects such as writing a theme, etc.'
+summary: >
+  I am a passionate software engineer with more than 20 years of working experience. And I am running this studio. 
+  
+  
+  This studio focuses on the development of sw, hw and whole embeded system. The studio have several successful cases. 
+  
+  
+  These successful cases show that we have strong experience on development of hardware, embeded software, desktop software and server software.
+  
+  
+  C and Python are my favorite programming languages. I have 22 years C programming experience and 10 years Python programming experience. 
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
