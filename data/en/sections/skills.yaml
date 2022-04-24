@@ -11,39 +11,62 @@ section:
 # Your Skills.
 # Give a summary of you each skill in the summary section.
 skills:
-- name: Kubernetes
+- name: HW development
   logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
-  url: "https://kubernetes.io/"
+  summary: >
+    *  Designing high-performance analog circuits and digital circuits
+    
+    *  Debugging analog circuits and digital circuits and problem solving
 
-- name: Go Development
+- name: Embeded system
   logo: /images/sections/skills/go.png
-  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
-  url: "https://golang.org/"
+  summary: >
+    * Having plent of experiences on the development of 8051 series microcontroller
 
-- name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+    * Having plent of experiences on the development of STM32 series microcontroller.
 
-- name: Docker
-  logo: /images/sections/skills/docker.svg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-  url: "https://www.docker.com/"
 
-- name: Prometheus
-  logo: /images/sections/skills/prometheus.png
-  summary: "Capable of setup, configure Prometheus metrics. Experienced with PromQL, AlertManager. Also, experienced with writing metric exporters."
-  url: "https://prometheus.io/"
-
-- name: Linux
+- name: Multi-platforms
   logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+  summary: >
+    * Having a lot of experience on Windows application development with PyQt5.
+    
+    * Having a lot of experience of Linux application/server development with C and python.
+    
+    * Having a lot of experience of Android App development with Java.    
 
-- name: Git
-  logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
-  url: "https://git-scm.com/"
 
-- name: C++
+- name: C & C++
   logo: /images/sections/skills/c++.png
-  summary: "Know basic C/C++ programming. Used for contest programming and problem solving."
+  summary: >
+    * Having a lot experience of C/C++ development.
+    
+    * Being familiar with the most popular Database such as MySql, Sql Server, MangoDB and so on.
+    
+    * Being familiar with multi-threading programming.
+    
+    * Being familiar with network programming and server programming
+    
+
+- name: Python
+  logo: /images/sections/skills/cloud.png
+  summary: >
+    *  Expertise In Core Python
+    
+    *  Good grasp of Web Frameworks
+    
+    *  Good at PyQt5
+    
+    *  Machine Learning and AI
+    
+    *  Front-End programming
+
+- name: Git & Project Management
+  logo: /images/sections/skills/git.png
+  summary: >
+    * Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab.
+  
+    * Experienced with project life management. 
+    
+
+
