@@ -1,114 +1,10 @@
-<!doctype html><html>
-<head>
-<title>红外测温</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/layouts/main.css>
-<link rel=stylesheet href=/css/navigators/navbar.css>
-<link rel=stylesheet href=/css/plyr.css>
-<link rel=stylesheet href=/css/flag-icon.min.css>
-<link rel=stylesheet href=/css/katex.min.css>
-<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<meta property="og:title" content="红外测温">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://PyuStudio.github.io/posts/thermometer/">
-<link rel=stylesheet href=/css/layouts/list.css>
-<link rel=stylesheet href=/css/navigators/sidebar.css>
-<link rel=stylesheet href=/css/style.css>
-</head>
-<body data-spy=scroll data-target=#TableOfContents data-offset=80>
-<div class="container-fluid bg-dimmed wrapper">
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
-<div class=container>
-<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span>
-</button>
-<a class=navbar-brand href=/>
-Pyu Studio</a>
+<!doctype html><html><head><title>红外测温</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href=/css/katex.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><meta property="og:title" content="红外测温"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://PyuStudio.github.io/posts/thermometer/"><link rel=stylesheet href=/css/layouts/list.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/>Pyu Studio</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
-<ul class="navbar-nav ml-auto">
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
-<span class="flag-icon flag-icon-zh-cn"></span>
-简体中文
-</a>
-<div class=dropdown-menu aria-labelledby=languageSelector>
-<a class="dropdown-item nav-link languages-item" href=/posts/thermometer>
-<span class="flag-icon flag-icon-gb"></span>
-English
-</a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<section class=sidebar-section id=sidebar-section>
-<div class=sidebar-holder>
-<div class=sidebar id=sidebar>
-<form class=mx-auto method=get action=/search>
-<input type=text name=keyword placeholder=Search data-search id=search-box>
-</form>
-<div class=sidebar-tree>
-<ul class=tree id=tree>
-<li id=list-heading><a href=/posts data-filter=all>博文</a></li>
-<div class=subtree>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/bode/>低频系统响应分析仪</a>
-<ul>
-<li><a href=/posts/bode/magicbox/ title=MagicBox低频系统分析仪>MagicBox低频系统分析仪</a></li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/bode/more/>更多</a>
-<ul>
-<li><a href=/posts/bode/more/post2/ title=Venable6305频率响应分析仪，经典型号，高性能，可升级>Venable6305频率响应分析仪，经典型号，高性能，可升级</a></li>
-<li><a href=/posts/bode/more/post1/ title="频率响应分析仪Bode 100—测试电源系统环路响应的利器">频率响应分析仪Bode 100—测试电源系统环路响应的利器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<i class="fas fa-minus-circle"></i><a class=active href=/posts/thermometer/>红外测温</a>
-<ul class=active>
-<li><a href=/posts/thermometer/elim/ title=红外测温模块>红外测温模块</a></li>
-<li><a href=/posts/thermometer/cali/ title=红外测温之校准>红外测温之校准</a></li>
-<li><a href=/posts/thermometer/post1/ title=红外测温原理>红外测温原理</a></li>
-<li><a href=/posts/thermometer/post2/ title=深度解析红外发射率！>深度解析红外发射率！</a></li>
-<li><a href=/posts/thermometer/post3/ title=淘宝商品详情页截图>淘宝商品详情页截图</a></li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/pcb/>PCB设计</a>
-<ul>
-<li><a href=/posts/pcb/post1/ title=PCB设计怎么才能敷好铜？>PCB设计怎么才能敷好铜？</a></li>
-<li><a href=/posts/pcb/post3/ title=PCB设计中如何巧妙地放置电子元件？>PCB设计中如何巧妙地放置电子元件？</a></li>
-<li><a href=/posts/pcb/post2/ title=PCB设计中必须留意什么间隔规定？>PCB设计中必须留意什么间隔规定？</a></li>
-</ul>
-</li>
-</div>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class=content-section id=content-section>
-<div class="content container-fluid" id=content>
-<div class="container-fluid post-card-holder" id=post-card-holder>
-<div class=post-card>
-<a href=/posts/thermometer/elim/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/posts/thermometer/elim/images/forest.jpg alt="Hero Image">
-</div>
-<div class=card-body>
-<h5 class=card-title>红外测温模块</h5>
-<p class="card-text post-summary">elim
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href=# id=languageSelector role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false><span class="flag-icon flag-icon-zh-cn"></span>
+简体中文</a><div class=dropdown-menu aria-labelledby=languageSelector><a class="dropdown-item nav-link languages-item" href=/posts/thermometer><span class="flag-icon flag-icon-gb"></span>
+English</a></div></li></ul></div></div></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>博文</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/posts/bode/>低频系统响应分析仪</a><ul><li><a href=/posts/bode/magicbox/ title=MagicBox低频系统分析仪>MagicBox低频系统分析仪</a></li><li><i class="fas fa-plus-circle"></i><a href=/posts/bode/more/>更多</a><ul><li><a href=/posts/bode/more/post2/ title=Venable6305频率响应分析仪，经典型号，高性能，可升级>Venable6305频率响应分析仪，经典型号，高性能，可升级</a></li><li><a href=/posts/bode/more/post1/ title="频率响应分析仪Bode 100—测试电源系统环路响应的利器">频率响应分析仪Bode 100—测试电源系统环路响应的利器</a></li></ul></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/posts/thermometer/>红外测温</a><ul class=active><li><a href=/posts/thermometer/elim/ title=红外测温模块>红外测温模块</a></li><li><a href=/posts/thermometer/cali/ title=红外测温之校准>红外测温之校准</a></li><li><a href=/posts/thermometer/post1/ title=红外测温原理>红外测温原理</a></li><li><a href=/posts/thermometer/post2/ title=深度解析红外发射率！>深度解析红外发射率！</a></li><li><a href=/posts/thermometer/post3/ title=淘宝商品详情页截图>淘宝商品详情页截图</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/posts/pcb/>PCB设计</a><ul><li><a href=/posts/pcb/post1/ title=PCB设计怎么才能敷好铜？>PCB设计怎么才能敷好铜？</a></li><li><a href=/posts/pcb/post3/ title=PCB设计中如何巧妙地放置电子元件？>PCB设计中如何巧妙地放置电子元件？</a></li><li><a href=/posts/pcb/post2/ title=PCB设计中必须留意什么间隔规定？>PCB设计中必须留意什么间隔规定？</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid post-card-holder" id=post-card-holder><div class=post-card><a href=/posts/thermometer/elim/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/posts/thermometer/elim/images/forest.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>红外测温模块</h5><p class="card-text post-summary">elim
 演示视频 市场常见测温方式 温度测量根据传感器和被测物体关系分为接触式和非接触式。
 接触式测温是指测温传感器与被测物体直接接触，待两者达到热平衡后，测温传感器测量出的温度即为被测物体的温度。由于这种测量方式需等待热平衡完成，所以此种测量方式存在响应时间长，且极易受环境温度的影响的问题。
 非接触式则是指测温传感器与被测物体不直接接触，测温传感器通过测量温度之外的物理量间接的测量出被测物体的温度。由于此种测量方式不需进行热平衡，所以后种方式具有响应速度快、测温范围广、稳定性好等特点。
@@ -146,75 +42,37 @@ English
 电流：&lt;5mA(工作） &lt;50nA(休眠）
 输出接口：IIC或uart
 被测温度范围：-0 ~ 600 °C
-工作温度：-20 ~ 85 °C</p>
-</div>
-<div class=card-footer>
-<span class=float-left>December 27, 2021</span>
-<a href=/posts/thermometer/elim/ class="float-right btn btn-outline-info btn-sm">阅读</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/thermometer/post3/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/posts/thermometer/post3/images/forest.jpg alt="Hero Image">
-</div>
-<div class=card-body>
-<h5 class=card-title>淘宝商品详情页截图</h5>
-<p class="card-text post-summary">这是淘宝上一商家的红外测温仪的商品详情页的截图。 </p>
-</div>
-<div class=card-footer>
-<span class=float-left>December 19, 2021</span>
-<a href=/posts/thermometer/post3/ class="float-right btn btn-outline-info btn-sm">阅读</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/thermometer/cali/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/posts/thermometer/cali/images/hero.jpg alt="Hero Image">
-</div>
-<div class=card-body>
-<h5 class=card-title>红外测温之校准</h5>
-<p class="card-text post-summary">系统总介 Elim红外测温模块的校准系统如上图所示。这是一个CS结构的系统。在这个CS系统中，CaliServer是Server端。它负责维护全部的校准数据，定义校准过程，也维护整个校准系统用户和其权限。Cali Serverd可以同时为多个CaliWare提供服务。
+工作温度：-20 ~ 85 °C
+使用注意事项 在实际的红外测温应用中，由于红外测温技术特点，有几点需要注意的：
+由于此类传感器使基于光学的（红外光），测得的温度为视场内的平均温度。所以在使用时需要确保视场内只有被测物体。
+理论上所有的物体都会发射红外辐射，但是每类物体发射红外辐射的能力不一样。这种能力，被称为红外发射率。在进行红外测温之前，需要正确的设置红外发射率。
+红外辐射在大气中的传播会有衰减。所以在测量距离比较远的时候，需要考虑衰减因素。
+相关链接 ElimDesktop，一款用于实时显示Elim模块测得的温度的桌面软件。
+《Elim高精度红外测温模块说明》， 模块说明书。
+Elim DemoBoard，Demo板的固件。Demo板采用We Act的Stm32F411核心板作为中控核心板，通过I2C接口与Elim模块通讯，同时通过USB，将自己定义成USB串口设备与ElimDesktop通信。</p></div><div class=card-footer><span class=float-left>December 27, 2021</span>
+<a href=/posts/thermometer/elim/ class="float-right btn btn-outline-info btn-sm">阅读</a></div></div></a></div><div class=post-card><a href=/posts/thermometer/post3/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/posts/thermometer/post3/images/forest.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>淘宝商品详情页截图</h5><p class="card-text post-summary">这是淘宝上一商家的红外测温仪的商品详情页的截图。</p></div><div class=card-footer><span class=float-left>December 19, 2021</span>
+<a href=/posts/thermometer/post3/ class="float-right btn btn-outline-info btn-sm">阅读</a></div></div></a></div><div class=post-card><a href=/posts/thermometer/cali/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/posts/thermometer/cali/images/hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>红外测温之校准</h5><p class="card-text post-summary">系统总介 Elim红外测温模块的校准系统如上图所示。这是一个CS结构的系统。在这个CS系统中，CaliServer是Server端。它负责维护全部的校准数据，定义校准过程，也维护整个校准系统用户和其权限。Cali Serverd可以同时为多个CaliWare提供服务。
 CaliWare和及其配属的硬件是作为整个系统的Client端，它用来实现在校准过程中对每个校准点的校准操作。它的主要功能是控制校准点的环境，记录校准数据，计算校准参数和读写模块，与CaliServer互动（上传校准数据和结果，权限管理和更新校准配置信息）。
 这种CS结构设计的优点是：
 采用了权限管理，只有具有授权的人才可以访问校准数据，设置校准流程和校准点数据，确保数据的安全。 校准流程和校准点数据可设置，整个系统可适配多种型号的校准。 支持更灵活的校准产线，可以根据生产情况，随时调整工作流水线的设定，具有更大的生产柔性。 易用的CaliWare，更适合产线操作员。 CaliServer CaliServer是基于python Flask框架编写的一Web App。它的主要作用是：
 校准过程中数据的记录 维护产品数据库 操作人员权限管理维护 校准过程的管理和维护 部分页面截图如下：
 权限管理页面
-在这个系统中，将用户分为两类，Admin和Public。 Admin是管理员，具有全部的系统操作权力。Public是为操作员准备的，具有此类权限的用户仅通过使用CaliWare与Cali Server进行交互，不能使用浏览器登陆系统或对系统进行查询等操作。
-用户管理页面
-工作站管理页面
-工作站在CaliWare中被称为“机位”。此项设置对所有型号通用。
-校准点管理页面
-校准点即在校准过程中选取的标准点。为了能够更高的精度，这些校准点应该均匀分布在产品的测量范围。所以，不同的型号会对应不同的校准点设置。
-校准数据管理页面
+在这个系统中，将用户分为两类，Admin和Public。 Admin是管理员，具有全部的系统操作权力。Public是为操作员准备的，具有此类权限的用户仅通过使用CaliWare与Cali Server进行交互，不能使用浏览器登陆系统或对系统进行查询等操作。 用户管理页面 工作站管理页面
+工作站在CaliWare中被称为“机位”。此项设置对所有型号通用。 校准点管理页面
+校准点即在校准过程中选取的标准点。为了能够更高的精度，这些校准点应该均匀分布在产品的测量范围。所以，不同的型号会对应不同的校准点设置。 校准数据管理页面
 在这个页面，管理员可是实现对校准数据的增删改查等操作。 CaliWare CaliWare是基于Python+Qt5编写的桌面软件。它的主要功能有：
 控制恒温室温度，为校准过程提供稳定的环境 控制红外辐射源的温度，为校准过程提供准确的目标温度 通过校准通讯板读取模块采集到的原始值 保存采集到的原始值到CaliServer中 计算校准参数 更新模块中的校准参数 保存校准参数到CaliServer中 将工厂数据写入到模块中 登陆UI
-CaliWare此时会使用用户输入的账号密码登陆CaliServer，登陆成功后，获得CaliServer颁发的key，进入主UI。
-主UI
-操作员将模块准备好后，点击“开始校准”按钮开始对模块的校准。CaliWare在用户点击后，按照“机位”的设置，执行校准过程，并将执行的结果显示在提示框中。 </p>
-</div>
-<div class=card-footer>
-<span class=float-left>December 15, 2021</span>
-<a href=/posts/thermometer/cali/ class="float-right btn btn-outline-info btn-sm">阅读</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/thermometer/post2/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/posts/thermometer/post2/images/hero.jpg alt="Hero Image">
-</div>
-<div class=card-body>
-<h5 class=card-title>深度解析红外发射率！</h5>
-<p class="card-text post-summary">热量和红外发射 热能是能量的一种形式。热量储存在物体中（我们周围的一切事物），就像电能储存在电池内一样。
+CaliWare此时会使用用户输入的账号密码登陆CaliServer，登陆成功后，获得CaliServer颁发的key，进入主UI。 主UI
+操作员将模块准备好后，点击“开始校准”按钮开始对模块的校准。CaliWare在用户点击后，按照“机位”的设置，执行校准过程，并将执行的结果显示在提示框中。</p></div><div class=card-footer><span class=float-left>December 15, 2021</span>
+<a href=/posts/thermometer/cali/ class="float-right btn btn-outline-info btn-sm">阅读</a></div></div></a></div><div class=post-card><a href=/posts/thermometer/post1/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/posts/thermometer/post1/images/hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>红外测温原理</h5><p class="card-text post-summary">自然界中的物体只要其温度高于绝对零度，就会不断地向外辐射能量。因此，理论上只要找到这些物体辐射能量与温度的对应关系并收集起来，经过一定的处理后，就可以得到与目标辐射分布相对应的热图像。
+一般将物体辐射出的波长在0.76μm-1000μm的电磁波定义为红外光波。将红外光按照波长分为四个波段：近红外(0.75μm～3.0μm)；中红外(3.0μm～6.0μm)；长波红外（6.0μm～15μm)和极远红外波段(15μm～1000μm)。研究发现，红外辐射对大气的穿透性和波长有很大关系，只有几个特定波段的红外辐射能够较好的穿透大气，研究人员将这几个特定的波段称为“大气窗口”，主要的大气窗口包括2μm -2.6μm，3μm～6μm和8μm～14μm。
+图为普朗克曲线
+红外热成像技术就是在利用红外辐射的“大气窗口”的波段进行成像。目前在红外成像领域研究较多的是采用中波红外（3μm～5μm）和长波红外（8μm～14μm）两个波段进行探测，将这些波段的辐射转换为人眼可观测并可供测量分析的图像数据。
+红外光波具有很强的温度效应，携带辐射目标的温度信息，这是利用红外成像进行温度场测量研究的基础。基于红外热成像的温度场测量技术是在红外辐射的基本定律基础上进行研究的，红外辐射的基本定律主要有四个：普朗克公式、维恩位移定律、朗伯余弦定律和斯蒂芬·波尔兹曼定律。
+当具备理论条件后，首先就由红外探测器和光学系统对目标物体实施红外扫描；然后将红外辐射信息聚集到探测器上，将其转化成电信号，并进行一系列放大处理；最后将这些信息传输到显示器上，就可以显示目标物体的温度分布情况了。红外热像仪不仅拥有温度测量的功能，而且拥有绘制测量对象温度分布的功能，可以将灰度图像转化成伪彩色图像。
+正常情况下，红外热像仪的扫描方式可以分为两种：一种是光机扫描，该扫描形式需要用到单元多元光伏或者广电导红外探测器。由于单元探测器会受到帧幅反应速度的制约，系统反应时间较长。通常会利用多元阵列探测器，将温度分布情况快速准确地显示出来。第二种是非扫描形式，这是新型的红外热像设备，与传统的光机扫描形式相比，阵列式凝视成像的焦平面热像仪的优点更加突出，逐渐挤压了光机扫描仪的市场空间。探测器是焦平面热像仪的核心部件，可以使目标物体的温度图像布满整个显示器，该扫描技术的便携性非常好，图像的清晰度更高，而且具有放大、自动聚焦、等温显示、语音注释的扩展功能，还可以根据自己的需求扩大存储空间。
+红外热像仪可以在不接触测量物体的情况下准确测量出目标物体的温度，并将其温度分布情况在显示器中显示出来。红外热像仪可以对测量到的温度进行精确化分析，对出现异常发热情况的设备故障进行检测分析。如今半导体技术、红外光学材料、微电子学等新型技术都应用到红外热像仪当中，极大地推动了该技术的发展，出现了能够显示二维可视图像的红外热像仪设备。</p></div><div class=card-footer><span class=float-left>December 8, 2021</span>
+<a href=/posts/thermometer/post1/ class="float-right btn btn-outline-info btn-sm">阅读</a></div></div></a></div><div class=post-card><a href=/posts/thermometer/post2/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/posts/thermometer/post2/images/hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>深度解析红外发射率！</h5><p class="card-text post-summary">热量和红外发射 热能是能量的一种形式。热量储存在物体中（我们周围的一切事物），就像电能储存在电池内一样。
 一个物体如果不带有热量将会是非常冷的，我们称其为绝对零度（-460℉或-273℃），这是最冷的物体。因为它的热量绝对值是零。当物体被加热时，温度会上升。一个物体的热量越多，将会变得越热。
 热量是通过分子和原子（次原子的微粒）的运动储存在物体内的。当物体处于绝对零度时，没有热量，分子和原子也不运动。一旦热量增加，温度开始上升，原子和分子（亚原子的微粒）开始振动（并改变能量的状态）。由于储存在物体内的热量总量的增加，分子和原子的振动将越来越剧烈。 就像两手拍打或橡胶带振动时产生声音一样，红外能量通过这些原子和分子的振动，通过它们相互之间的碰撞释放出来。这些释放出的能量就是红外测温仪所测量的红外能量。温度越高，原子和分子的振动越剧烈，释放的红外能量越多。这里关于温度和释放的红外能两者之间密切的线性关系，就是红外测温仪能够准确测温的工作原理。
 黑体能量分布和波长、温度之间的关系 通常一个物体释放出的红外能总量与其温度呈正比关系。一个相对小的温度变化通常能够带来一个相对较大的红外能量的变化。因此，红外测温仪具有较高的精度。但现实中存在很多影响红外测温仪准确工作的因素。因此，了解红外测温仪的本质和原理是至关重要的。
@@ -235,113 +93,17 @@ CaliWare此时会使用用户输入的账号密码登陆CaliServer，登陆成�
 黑体材料 假设有一种物体，在某一给定的温度下能够全部吸收投射到其表面的任何波长的辐射能量，则称之为黑体。黑体材料是一个完美的发射器，它的发射率值为1.000或100%。也就是说，一个完美的黑体材料是完全无反射的。在各种材料中，反射率越低，发射率越高，这种材料就越接近黑体材料。因此，反射率相当低的材料，诸如纸、纺织品、水泥和砖能够使用一个简单的、一般的红外测温仪来精确地测量其发射率，因为他们非常接近于黑体材料。然而也有很多材料与黑体材料大不相同，它们具有很高的反射率和穿透率。这些与黑体材料大不相同的材料，根据其发射率特点，大体上可以分为三种类型，即灰体材料、非灰体材料，以及可选择型发射体。
 灰体材料 灰体材料的发射率值低于1.000，并且其发射率值在任何波长下都是相同的。灰体材料通常具有固定的发射率值，仅仅在其表面粗糙度改变的情况下，这一值才可能被改变，其它情况下则是一个常数。一个灰体材料在某一给定温度下发射出的红外能如果是黑体材料的70%，则其发射率值为0.700。通常来说，不透明的物体具有一个相对高的发射率值（通常反射率在0.300-0.400之间，发射率在0.600-0.700之间），这种物体通常称为灰体材料。 非灰体材料 非灰体材料在不同的波长下具有不同的发射率值。对于不透明的材料来说，发射率随波长变化的趋势，主要是由材料的微观表面结构和物理属性所决定的。而对非灰体材料来说，对于红外能的吸收、反射和穿透的趋势取决于波长。可选择型发射体是一个特殊的非灰体材料，将在下一章节另作谈论。
 材料的表面纹理和氧化度也会影响表面发射率。尽管我们认为反射率高的材料是很光滑的，但在显微镜下，其表面还是有很多褶皱和裂缝。这些褶皱和裂缝很小，通常红外波无法进入，所以材料在此波长下具有较高的反射率。然而，如果波长足够小并可以进入这些褶皱和裂缝，则会有所损失，物体的反射率就会变低，材料在反射率较低时发射率较高，在反射率较高时发射率较低。因为比起长波，短波更容易渗入褶皱和裂缝，因此在用短波测量时，被测目标的发射率比用长波测量时更高。通常发射率值低于0.400-0.500的金属，我们称为非灰体。
-另外，表面纹理和氧化度的变化同样会引起基于波长的发射率变化。如果氧化结构的表面缝隙大于红外波长，比如氧化铁表面就显得很粗糙，其发射率相对较高，并且用小于此结构缝隙的所有波长进行测量时，发射率和反射率都是不变的。相反地，如果氧化结构的缝隙很小，比如氧化铬镀层，此时短波可以渗透，而长波则不行。随着氧化层变厚，渐渐能够吸收所有的波长，则其发射率值在各种波长下都是不变的。比如薄的胶片表面具有非常细致的氧化层，很容易把它看成是透明的，因此这些镀层在影响其表面纹理的同时，也可将其看成是可选择型发射体。</p>
-</div>
-<div class=card-footer>
-<span class=float-left>December 8, 2021</span>
-<a href=/posts/thermometer/post2/ class="float-right btn btn-outline-info btn-sm">阅读</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/thermometer/post1/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/posts/thermometer/post1/images/hero.jpg alt="Hero Image">
-</div>
-<div class=card-body>
-<h5 class=card-title>红外测温原理</h5>
-<p class="card-text post-summary">自然界中的物体只要其温度高于绝对零度，就会不断地向外辐射能量。因此，理论上只要找到这些物体辐射能量与温度的对应关系并收集起来，经过一定的处理后，就可以得到与目标辐射分布相对应的热图像。
-一般将物体辐射出的波长在0.76μm-1000μm的电磁波定义为红外光波。将红外光按照波长分为四个波段：近红外(0.75μm～3.0μm)；中红外(3.0μm～6.0μm)；长波红外（6.0μm～15μm)和极远红外波段(15μm～1000μm)。研究发现，红外辐射对大气的穿透性和波长有很大关系，只有几个特定波段的红外辐射能够较好的穿透大气，研究人员将这几个特定的波段称为“大气窗口”，主要的大气窗口包括2μm -2.6μm，3μm～6μm和8μm～14μm。
-图为普朗克曲线
-红外热成像技术就是在利用红外辐射的“大气窗口”的波段进行成像。目前在红外成像领域研究较多的是采用中波红外（3μm～5μm）和长波红外（8μm～14μm）两个波段进行探测，将这些波段的辐射转换为人眼可观测并可供测量分析的图像数据。
-红外光波具有很强的温度效应，携带辐射目标的温度信息，这是利用红外成像进行温度场测量研究的基础。基于红外热成像的温度场测量技术是在红外辐射的基本定律基础上进行研究的，红外辐射的基本定律主要有四个：普朗克公式、维恩位移定律、朗伯余弦定律和斯蒂芬·波尔兹曼定律。
-当具备理论条件后，首先就由红外探测器和光学系统对目标物体实施红外扫描；然后将红外辐射信息聚集到探测器上，将其转化成电信号，并进行一系列放大处理；最后将这些信息传输到显示器上，就可以显示目标物体的温度分布情况了。红外热像仪不仅拥有温度测量的功能，而且拥有绘制测量对象温度分布的功能，可以将灰度图像转化成伪彩色图像。
-正常情况下，红外热像仪的扫描方式可以分为两种：一种是光机扫描，该扫描形式需要用到单元多元光伏或者广电导红外探测器。由于单元探测器会受到帧幅反应速度的制约，系统反应时间较长。通常会利用多元阵列探测器，将温度分布情况快速准确地显示出来。第二种是非扫描形式，这是新型的红外热像设备，与传统的光机扫描形式相比，阵列式凝视成像的焦平面热像仪的优点更加突出，逐渐挤压了光机扫描仪的市场空间。探测器是焦平面热像仪的核心部件，可以使目标物体的温度图像布满整个显示器，该扫描技术的便携性非常好，图像的清晰度更高，而且具有放大、自动聚焦、等温显示、语音注释的扩展功能，还可以根据自己的需求扩大存储空间。
-红外热像仪可以在不接触测量物体的情况下准确测量出目标物体的温度，并将其温度分布情况在显示器中显示出来。红外热像仪可以对测量到的温度进行精确化分析，对出现异常发热情况的设备故障进行检测分析。如今半导体技术、红外光学材料、微电子学等新型技术都应用到红外热像仪当中，极大地推动了该技术的发展，出现了能够显示二维可视图像的红外热像仪设备。</p>
-</div>
-<div class=card-footer>
-<span class=float-left>December 8, 2021</span>
-<a href=/posts/thermometer/post1/ class="float-right btn btn-outline-info btn-sm">阅读</a>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class=paginator>
-</div>
-</div>
-</section>
-</div>
-<footer class="container-fluid text-center align-content-center footer pb-2">
-<div class="container pt-5">
-<div class="row text-left">
-<div class="col-md-4 col-sm-12">
-<h5>导航</h5>
-<ul>
-<li class=nav-item>
-<a class=smooth-scroll href=https://PyuStudio.github.io/#about>About</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://PyuStudio.github.io/#skills>专业特长</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://PyuStudio.github.io/#projects>成功案例</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://PyuStudio.github.io/#recent-posts>最新文章</a>
-</li>
-</ul>
-</div>
-<div class="col-md-4 col-sm-12">
-<h5>联系方式:</h5>
-<ul>
-<li><a href=mailto:PyuStudio@163.com target=_blank rel=noopener>
-<span><i class="fas fa-envelope"></i></span> <span>PyuStudio@163.com</span>
-</a></li>
-<li><a href=https://github.com/PyuStudio target=_blank rel=noopener>
-<span><i class="fab fa-github"></i></span> <span>PyuStudio</span>
-</a></li>
-<li><a href=https://www.linkedin.com/in/PyuStudio target=_blank rel=noopener>
-<span><i class="fab fa-linkedin"></i></span> <span>朴玉工作室</span>
-</a></li>
-<li><span><i class="fas fa-phone-alt"></i></span> <span>+8618521516525</span></li>
-</ul>
-</div>
-<div class="col-md-4 col-sm-12">
-<p>通过电子邮件接收最新信息</p>
-<form method=post action=https://blogtrottr.com>
-<div class=form-group>
-<input type=email class=form-control name=btr_email placeholder="填入 E-mail"><br>
-<input type=hidden name=btr_url value=https://PyuStudio.github.io/index.xml>
+另外，表面纹理和氧化度的变化同样会引起基于波长的发射率变化。如果氧化结构的表面缝隙大于红外波长，比如氧化铁表面就显得很粗糙，其发射率相对较高，并且用小于此结构缝隙的所有波长进行测量时，发射率和反射率都是不变的。相反地，如果氧化结构的缝隙很小，比如氧化铬镀层，此时短波可以渗透，而长波则不行。随着氧化层变厚，渐渐能够吸收所有的波长，则其发射率值在各种波长下都是不变的。比如薄的胶片表面具有非常细致的氧化层，很容易把它看成是透明的，因此这些镀层在影响其表面纹理的同时，也可将其看成是可选择型发射体。
+可选择型发射体 红外能是一种电磁能，就像可见光、无线电波和X射线。如果在胸口打上一束光，它不能穿过，而如果是X射线就能够穿过。光与X射线的唯一区别就在于波长。所以通过改变波长，有些物体会变得更加透明或更加不透明，玻璃就是一个很好的例子。玻璃在短波下是透明的，但在波长大于4.8mm的长波下则是不透明的。也就是说，在短波下玻璃的发射率更低。而因其在长波下是不透明的，因而此时具有更高的发射率。玻璃的发射率也随着波长的改变而改变，在6.6-8.2mm的波长下，玻璃是高度不透明和高度低反射的。这一波段也是玻璃具有最高的发射率值和最类似于黑体材料的波段。
+薄的塑料胶片是最典型的可选择型发射体。这种材料是由一长串氢和碳原子链组成的，这一可重复的统一的分子结构使得分子和原子以一个均匀的频率和谐地振动。与这一振动频率一致的红外波长被塑料材料优先吸收（不是反射或穿透）；另一方面，这一材料发射出的红外能首先是与振动频率一致的波长。当我们观察一个塑料夹层带时，它是透明的。但如果用一个与振动频率一致的3.43mm长度的波来测量，这个夹层带则是完全不透明的。当测量一个可选择型发射体的温度时，选择与一个强的发射波段一致的波长是至关重要的。在这种波长下，红外发射最为接近黑体条件，该材料也具有最高的不透明度和最低的反射率。可选择型发射体的另一些例子是所有的气体和所有的高透明材料。许多晶体材料，比如硅和陶瓷也是可选择型发射体。统一的分子结构使这些材料具有如上所述的发射率特性。 薄膜镀层也可以看成是可选择型发射体。在金属工业领域，金属薄板经常会被镀上一层薄膜。油基漆、水基漆、机油和腊是最为常见的涂在金属外部的镀层，它们都可以看作是可选择型发射体。这些材料在有些波长下是高度透明的，在另一些波长下则是高度不透明和低反射的。镀层的发射率在很大程度上取决于波长。一个红外测温仪的最佳波长应该能够随着镀层材料、镀层厚度、所需温度范围，以及对镀层的观测和穿过镀层观测的需求的变化而变化。
+如何用简单的方法来搞定发射率！ 各种物体表面的发射率是由物体表面的材质决定的，是否您在使用热像仪测量不同材质物体表面温度时，尤其是光亮的金属或非金属表面，陷入解决发射率的困境了呢？如果是，不用急，小编教你如何用简单的方法来搞定发射率！
+表面可处理之绝缘胶带法 适用场合：适用于被测目标相对比较大，温度较低（小于100℃），要求测试后不改变原目标表面状况的场合，例如各种散热模块、光洁器件表面、金属表面等</p></div><div class=card-footer><span class=float-left>December 8, 2021</span>
+<a href=/posts/thermometer/post2/ class="float-right btn btn-outline-info btn-sm">阅读</a></div></div></a></div></div><div class=paginator></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>导航</h5><ul><li class=nav-item><a class=smooth-scroll href=https://PyuStudio.github.io/#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://PyuStudio.github.io/#skills>专业特长</a></li><li class=nav-item><a class=smooth-scroll href=https://PyuStudio.github.io/#projects>成功案例</a></li><li class=nav-item><a class=smooth-scroll href=https://PyuStudio.github.io/#recent-posts>最新文章</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>联系方式:</h5><ul><li><a href=mailto:PyuStudio@163.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>PyuStudio@163.com</span></a></li><li><a href=https://github.com/PyuStudio target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>PyuStudio</span></a></li><li><a href=https://www.linkedin.com/in/PyuStudio target=_blank rel=noopener><span><i class="fab fa-linkedin"></i></span> <span>朴玉工作室</span></a></li><li><span><i class="fas fa-phone-alt"></i></span> <span>+8618521516525</span></li></ul></div><div class="col-md-4 col-sm-12"><p>通过电子邮件接收最新信息</p><form method=post action=https://blogtrottr.com><div class=form-group><input type=email class=form-control name=btr_email placeholder="填入 E-mail"><br><input type=hidden name=btr_url value=https://PyuStudio.github.io/index.xml>
 <input type=hidden name=schedule_type value=1>
 <small id=emailHelp class="form-text text-muted">输入您的电子邮件地址，即表示您同意接收本网站的时事通讯</small>
-<button type=submit class="btn btn-info"> 提交 </button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<hr>
-<div class=container>
-<div class="row text-left">
-<div class=col-md-4>
-<a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener>
-<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
-Toha
-</a>
-</div>
-<div class="col-md-4 text-center">© 2020 Copyright.</div>
-<div class="col-md-4 text-right">
-<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<button type=submit class="btn btn-info"> 提交</button></div></form></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2020 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
 <script type=text/javascript src=/js/popper.min.js></script>
 <script type=text/javascript src=/js/bootstrap.min.js></script>
 <script type=text/javascript src=/js/navbar.js></script>
@@ -349,6 +111,4 @@ Toha
 <script type=text/javascript src=/js/main.js></script>
 <script type=text/javascript defer src=/js/katex.min.js></script>
 <script type=text/javascript defer src=/js/auto-render.min.js onload=renderMathInElement(document.body)></script>
-<script src=/js/list.js></script>
-</body>
-</html>
+<script src=/js/list.js></script></body></html>

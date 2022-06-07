@@ -1,58 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Multi-lingual on Pyu Studio</title><link>https://PyuStudio.github.io/en/tags/multi-lingual/</link><description>Recent content in Multi-lingual on Pyu Studio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Dec 2021 10:06:25 +0800</lastBuildDate><atom:link href="https://PyuStudio.github.io/en/tags/multi-lingual/index.xml" rel="self" type="application/rss+xml"/><item><title>红外测温模块</title><link>https://PyuStudio.github.io/en/posts/thermometer/elim/</link><pubDate>Mon, 27 Dec 2021 10:06:25 +0800</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/elim/</guid><description>test
-演示视频 市场常见测温方式 温度测量根据传感器和被测物体关系分为接触式和非接触式。
-接触式测温是指测温传感器与被测物体直接接触，待两者达到热平衡后，测温传感器测量出的温度即为被测物体的温度。由于这种测量方式需等待热平衡完成，所以此种测量方式存在响应时间长，且极易受环境温度的影响的问题。
-非接触式则是指测温传感器与被测物体不直接接触，测温传感器通过测量温度之外的物理量间接的测量出被测物体的温度。由于此种测量方式不需进行热平衡，所以后种方式具有响应速度快、测温范围广、稳定性好等特点。
-红外测温的问题 红外测温是非接触测温中最常见的测温方式。与其它非接触式测温方式一样，它也有响应速度快，测温范围广、稳定性好等优点。但是这种测温方式也不完美。这种测温方式很难同时兼顾测温范围和精度。
-目前应用中，常见的红外测温设备分为两类。一类是侧重于精度的测量设备。它们的特点是精度比较高，但是测温范围比较窄。这类设备通常用于体温的测量，例如耳温枪、额温枪等。
-另一类是侧重于范围的测量设备。它们的特点是测温范围比较宽，但是精度比较低。这类设备通常用于工程、工业中的非精确测量，例如红外测温仪。
-目前市场中尚不存在高精度，宽测温范围的红外测温设备。
-我们的突破 AI核心算法 红外测温利用的原理是：任何在绝对温度之上的物体都在发射红外辐射，而且红外辐射的强度与温度相关，所以可以根据红外辐射强度与温度的关系计算出温度。在实际的温度计算中，两者的关系不是线性的，只能用一定的算法进行近似计算。这个近似计算的算法是整个红外温度测量的核心，它对测温的精度和范围有关键的影响。
-我们对上面提到的强度到温度的算法进行了重新的设计，抛弃了传统的折线近似算法，开发了颠覆性的AI算法。在开发AI算法的过程中，我们先采用Tensorflow平台将传感器的VT表（电压温度转换表）转换为一个AI模型和与之匹配的张量；再将该模型和张量移植到目标平台中。最终实验数据表明，此算法能够大幅提高温度测量的精度。
-新一代校准 另外一个影响红外测温精度的方面是校准。我们也在这个方面做了颠覆性的改变。
-在传统的校准过程中，校准数据的计算均在红外测温设备上完成。这种方式的缺点：
-一致性差
-校准过程就是在标准环境下比较测量值与标准值并根据此两者差异决定如何补偿的过程。由于各种干扰的存在，每一次的测量值都不尽相同。如果不对测量中干扰导致的噪声和异常进行处理，直接使用测量值计算校准参数，必会导致校准结果存在一致性的问题。
-红外测温设备作为嵌入式设备，存储和计算能力都不足，无法有效的处理噪声和干扰。也就说，传统的校准方式无法解决一致性的问题。
-校准效果不理想
-因为红外温度传感器的误差函数为曲线，而非直线，所以最好采用曲线拟合的方式进行校准。但是受限于红外测温设备上的计算能力和数据存储空间限制，校准功能无法采用曲线拟合的方式实现，只能采用直线拟合的方式。这就导致了校准结果只适用于比较小的测量范围，如果测温范围较大，校准效果就会不理想。
-为了解决传统校准方式的缺点，我们开发了新一代的校准方案。在这个方案中，我们开发了专业的校准软件，将校准参数的计算由红外测温设备转移到计算机上，以充分利用了计算机强大的计算能力达到更好的校准结果。同时，我们也使用AI技术更新了红外测温设备中的校准算法。这个方案的优点：
-一致性高
-在这个方案中，由于校准点的测量结果保存在校准软件中，而不是模块内部，所以校准点的数量和读取次数不受限制。所以这个方案可以通过加多次测量多个校准点和AI技术有效地过滤掉异常数据和噪声，从而提高了一致性。
-理想的校准效果
-这个方案抛弃了原始的直线拟合的校准方式，引入了全新的向量校准方式。在这种向量校准方式中，校准结果是由AI模型计算出，模型数据则由校准软件通过Tensorflow计算校准点的测量值算出。这个模型数据就是校准参数。
-由于AI模型可以更好的拟合曲线，所以这种校准方式能在更大的范围对误差进行补偿，其校准结果也就更加理想。
-校准系统的详细介绍在这里。
-优良的硬件 再一个影响红外测温精度的方面是硬件基础。硬件基础是所有实现的基石。我们为此做了两方面的保证。
-一是我们在硬件上ADC（模数转换）的选择。由于红外温度传感器输出电压的变化非常的小，每0.01℃的温度变化对应的电压变化仅为0.002毫伏，所以我们选用了业内知名的ADC。它具有低温漂，高精度(其分辨率达到了0.001毫伏)的优点。
-二是我们在测温电路里面全部采用高精度低温漂的无源器件，而非基于成本考量，采用普通规格元件。
-由于AI核心算法、新一代校准技术和优良的硬件这三个方面的改进，我们最终实现了宽温域，高精度的红外测温模块。
-产品及服务 标准产品 目前，我们开发了两款红外测温模块。低温红外测温模块Elim01L适用于0-100°C的测温场景。它的测量误差仅为0.05℃，远超市场上绝大多数红外体温测量设备的0.1℃误差的标准。
-高温红外测温模块Elim01H则适用于0-600°C的测温场景。它的测量误差为0.5℃，在精度上也远超市场上绝大多数红外测温设备。
-高度可定制 在两款标品之外，我们还可以针对客户的需求进行定制，例如更换特定的红外镜头、指定特定的测温范围和精度。在定制产品中，我们可以实现最高精度达0.01℃的标准。
-全面的技术支持 由于掌握了红外温度测量的每个技术细节，我们能够为客户提供全面的技术支持，无论是软硬件调试还是应用场景，均能协助客户解决遇到的问题。
-为便于客户迅速开发， 我们开源了与此模块配套的Demo板和其软件（请参见“相关链接”）资料。使用这套软硬件，客户可以迅速掌握模块的使用并对其应用进行验证。
-功能规格 尺寸：25x30.5x22.5（带不锈钢套），25x30.5x8（不带不锈钢套）
-电压：3.3V
-电流：&amp;lt;5mA(工作） &amp;lt;50nA(休眠）
-输出接口：IIC或uart
-被测温度范围：-0 ~ 600 °C
-工作温度：-20 ~ 85 °C</description></item><item><title>淘宝商品详情页截图</title><link>https://PyuStudio.github.io/en/posts/thermometer/post3/</link><pubDate>Sun, 19 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post3/</guid><description>这是淘宝上一商家的红外测温仪的商品详情页的截图。</description></item><item><title>红外测温之校准</title><link>https://PyuStudio.github.io/en/posts/thermometer/cali/</link><pubDate>Wed, 15 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/cali/</guid><description>系统总介 Elim红外测温模块的校准系统如上图所示。这是一个CS结构的系统。在这个CS系统中，CaliServer是Server端。它负责维护全部的校准数据，定义校准过程，也维护整个校准系统用户和其权限。Cali Serverd可以同时为多个CaliWare提供服务。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Multi-lingual on Pyu Studio</title><link>https://PyuStudio.github.io/en/tags/multi-lingual/</link><description>Recent content in Multi-lingual on Pyu Studio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Dec 2021 10:06:25 +0800</lastBuildDate><atom:link href="https://PyuStudio.github.io/en/tags/multi-lingual/index.xml" rel="self" type="application/rss+xml"/><item><title>Infrared thermometer</title><link>https://PyuStudio.github.io/en/posts/thermometer/elim/</link><pubDate>Mon, 27 Dec 2021 10:06:25 +0800</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/elim/</guid><description>&lt;p>Infrared temperature measurement is the most common temperature measurement method in non-contact temperature measurement. Like other non-contact temperature measurement methods, it also has the advantages of fast response, wide temperature measurement range and good stability. However, this temperature measurement method is difficult to keep the high accuracy with wide temperature measurement range.&lt;/p>
+&lt;p>We have studied the details of the theory, and made breakthroughs in AI core algorithms, new-generation calibration system, and hardware performance improvement, and realized the products with the new solution. Our products can do temperature measurement with high accuracy in wide temperature measurement range.&lt;/p></description></item><item><title>淘宝商品详情页截图</title><link>https://PyuStudio.github.io/en/posts/thermometer/post3/</link><pubDate>Sun, 19 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post3/</guid><description>这是淘宝上一商家的红外测温仪的商品详情页的截图。</description></item><item><title>红外测温之校准</title><link>https://PyuStudio.github.io/en/posts/thermometer/cali/</link><pubDate>Wed, 15 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/cali/</guid><description>系统总介 Elim红外测温模块的校准系统如上图所示。这是一个CS结构的系统。在这个CS系统中，CaliServer是Server端。它负责维护全部的校准数据，定义校准过程，也维护整个校准系统用户和其权限。Cali Serverd可以同时为多个CaliWare提供服务。
 CaliWare和及其配属的硬件是作为整个系统的Client端，它用来实现在校准过程中对每个校准点的校准操作。它的主要功能是控制校准点的环境，记录校准数据，计算校准参数和读写模块，与CaliServer互动（上传校准数据和结果，权限管理和更新校准配置信息）。
 这种CS结构设计的优点是：
 采用了权限管理，只有具有授权的人才可以访问校准数据，设置校准流程和校准点数据，确保数据的安全。 校准流程和校准点数据可设置，整个系统可适配多种型号的校准。 支持更灵活的校准产线，可以根据生产情况，随时调整工作流水线的设定，具有更大的生产柔性。 易用的CaliWare，更适合产线操作员。 CaliServer CaliServer是基于python Flask框架编写的一Web App。它的主要作用是：
 校准过程中数据的记录 维护产品数据库 操作人员权限管理维护 校准过程的管理和维护 部分页面截图如下：
 权限管理页面
-在这个系统中，将用户分为两类，Admin和Public。 Admin是管理员，具有全部的系统操作权力。Public是为操作员准备的，具有此类权限的用户仅通过使用CaliWare与Cali Server进行交互，不能使用浏览器登陆系统或对系统进行查询等操作。
-用户管理页面
-工作站管理页面
-工作站在CaliWare中被称为“机位”。此项设置对所有型号通用。
-校准点管理页面
-校准点即在校准过程中选取的标准点。为了能够更高的精度，这些校准点应该均匀分布在产品的测量范围。所以，不同的型号会对应不同的校准点设置。
-校准数据管理页面
+在这个系统中，将用户分为两类，Admin和Public。 Admin是管理员，具有全部的系统操作权力。Public是为操作员准备的，具有此类权限的用户仅通过使用CaliWare与Cali Server进行交互，不能使用浏览器登陆系统或对系统进行查询等操作。 用户管理页面 工作站管理页面
+工作站在CaliWare中被称为“机位”。此项设置对所有型号通用。 校准点管理页面
+校准点即在校准过程中选取的标准点。为了能够更高的精度，这些校准点应该均匀分布在产品的测量范围。所以，不同的型号会对应不同的校准点设置。 校准数据管理页面
 在这个页面，管理员可是实现对校准数据的增删改查等操作。 CaliWare CaliWare是基于Python+Qt5编写的桌面软件。它的主要功能有：
 控制恒温室温度，为校准过程提供稳定的环境 控制红外辐射源的温度，为校准过程提供准确的目标温度 通过校准通讯板读取模块采集到的原始值 保存采集到的原始值到CaliServer中 计算校准参数 更新模块中的校准参数 保存校准参数到CaliServer中 将工厂数据写入到模块中 登陆UI
-CaliWare此时会使用用户输入的账号密码登陆CaliServer，登陆成功后，获得CaliServer颁发的key，进入主UI。
-主UI
+CaliWare此时会使用用户输入的账号密码登陆CaliServer，登陆成功后，获得CaliServer颁发的key，进入主UI。 主UI
 操作员将模块准备好后，点击“开始校准”按钮开始对模块的校准。CaliWare在用户点击后，按照“机位”的设置，执行校准过程，并将执行的结果显示在提示框中。</description></item><item><title>MagicBox低频系统分析仪</title><link>https://PyuStudio.github.io/en/posts/bode/magicbox/</link><pubDate>Thu, 09 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/bode/magicbox/</guid><description>产品特点 MagicBox是为解决常见频率响应测试仪在低频测试时表现不佳的问题而设计。它通过精心设计的bode盒，解决了低频测试时信号注入的难题。同时，在上层软件上，它采用了python语言作为开发语言，借助于丰富的python库，实现了高效复杂的数学运算，提高了仪器的灵敏度和准确度。</description></item><item><title>Venable6305频率响应分析仪，经典型号，高性能，可升级</title><link>https://PyuStudio.github.io/en/posts/bode/more/post2/</link><pubDate>Wed, 08 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/bode/more/post2/</guid><description>Venable6300系列频率响应分析仪结合了最新的模拟和数字技术，以及先进的数字信号处理技术（DSP），以提供多样化测试与分析功能。这一综合性软硬件系统具有非常精密的测试功能，具有10μHz至40MHz的频宽和2个输入端，并受到保护，峰值电压不超过600V。Venable6305可以很好的替换Venable3120, Venable6320可以替换Venable3215。
 Venable著名的基于K系数的软件，现已称为Stability Analysis™ v5.1。该6300系列仪器是您目前用于测量相位/增益和阻抗的最完整、精确且易用的系统。Venable通过行业标准IEEE-488接口或者USB接口运行，可导入/导出至MATLABTM和Excel™，并以.jpeg文件格式保存波德/阻抗图。导出的图片可用于图片展示软件或保存为.wen格式的文件，进行离线数据处理。
 Venable仪器包含了最新的CPLD技术，用以释放专用处理器的功率，从而执行所有数据采集和分析功能。独立处理器处理所有通信功能。最佳性能来源于使用CPLD内部存储器，实现处理器与模拟硬件之间的异步缓冲。6300系列对两个输入端执行同步分析，可靠地收集所有数据。它是真正的多功能仪器，通过坚固的便携式工具箱（仅重12磅），帮助您实现各种应用。工程师和科学家们现在可通过价格合理的紧凑系统——Venable 6300系列，获取用于生产、研发实验室、学术或现场操作的速度和技术。
@@ -107,8 +65,7 @@ AC振幅
 积分时间：
 20msec至100ksec
 积分周期：
-1-9999周期
-输入耦合：</description></item><item><title>深度解析红外发射率！</title><link>https://PyuStudio.github.io/en/posts/thermometer/post2/</link><pubDate>Wed, 08 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post2/</guid><description>热量和红外发射 热能是能量的一种形式。热量储存在物体中（我们周围的一切事物），就像电能储存在电池内一样。
+1-9999周期</description></item><item><title>深度解析红外发射率！</title><link>https://PyuStudio.github.io/en/posts/thermometer/post2/</link><pubDate>Wed, 08 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post2/</guid><description>热量和红外发射 热能是能量的一种形式。热量储存在物体中（我们周围的一切事物），就像电能储存在电池内一样。
 一个物体如果不带有热量将会是非常冷的，我们称其为绝对零度（-460℉或-273℃），这是最冷的物体。因为它的热量绝对值是零。当物体被加热时，温度会上升。一个物体的热量越多，将会变得越热。
 热量是通过分子和原子（次原子的微粒）的运动储存在物体内的。当物体处于绝对零度时，没有热量，分子和原子也不运动。一旦热量增加，温度开始上升，原子和分子（亚原子的微粒）开始振动（并改变能量的状态）。由于储存在物体内的热量总量的增加，分子和原子的振动将越来越剧烈。 就像两手拍打或橡胶带振动时产生声音一样，红外能量通过这些原子和分子的振动，通过它们相互之间的碰撞释放出来。这些释放出的能量就是红外测温仪所测量的红外能量。温度越高，原子和分子的振动越剧烈，释放的红外能量越多。这里关于温度和释放的红外能两者之间密切的线性关系，就是红外测温仪能够准确测温的工作原理。
 黑体能量分布和波长、温度之间的关系 通常一个物体释放出的红外能总量与其温度呈正比关系。一个相对小的温度变化通常能够带来一个相对较大的红外能量的变化。因此，红外测温仪具有较高的精度。但现实中存在很多影响红外测温仪准确工作的因素。因此，了解红外测温仪的本质和原理是至关重要的。
@@ -129,7 +86,11 @@ AC振幅
 黑体材料 假设有一种物体，在某一给定的温度下能够全部吸收投射到其表面的任何波长的辐射能量，则称之为黑体。黑体材料是一个完美的发射器，它的发射率值为1.000或100%。也就是说，一个完美的黑体材料是完全无反射的。在各种材料中，反射率越低，发射率越高，这种材料就越接近黑体材料。因此，反射率相当低的材料，诸如纸、纺织品、水泥和砖能够使用一个简单的、一般的红外测温仪来精确地测量其发射率，因为他们非常接近于黑体材料。然而也有很多材料与黑体材料大不相同，它们具有很高的反射率和穿透率。这些与黑体材料大不相同的材料，根据其发射率特点，大体上可以分为三种类型，即灰体材料、非灰体材料，以及可选择型发射体。
 灰体材料 灰体材料的发射率值低于1.000，并且其发射率值在任何波长下都是相同的。灰体材料通常具有固定的发射率值，仅仅在其表面粗糙度改变的情况下，这一值才可能被改变，其它情况下则是一个常数。一个灰体材料在某一给定温度下发射出的红外能如果是黑体材料的70%，则其发射率值为0.700。通常来说，不透明的物体具有一个相对高的发射率值（通常反射率在0.300-0.400之间，发射率在0.600-0.700之间），这种物体通常称为灰体材料。 非灰体材料 非灰体材料在不同的波长下具有不同的发射率值。对于不透明的材料来说，发射率随波长变化的趋势，主要是由材料的微观表面结构和物理属性所决定的。而对非灰体材料来说，对于红外能的吸收、反射和穿透的趋势取决于波长。可选择型发射体是一个特殊的非灰体材料，将在下一章节另作谈论。
 材料的表面纹理和氧化度也会影响表面发射率。尽管我们认为反射率高的材料是很光滑的，但在显微镜下，其表面还是有很多褶皱和裂缝。这些褶皱和裂缝很小，通常红外波无法进入，所以材料在此波长下具有较高的反射率。然而，如果波长足够小并可以进入这些褶皱和裂缝，则会有所损失，物体的反射率就会变低，材料在反射率较低时发射率较高，在反射率较高时发射率较低。因为比起长波，短波更容易渗入褶皱和裂缝，因此在用短波测量时，被测目标的发射率比用长波测量时更高。通常发射率值低于0.400-0.500的金属，我们称为非灰体。
-另外，表面纹理和氧化度的变化同样会引起基于波长的发射率变化。如果氧化结构的表面缝隙大于红外波长，比如氧化铁表面就显得很粗糙，其发射率相对较高，并且用小于此结构缝隙的所有波长进行测量时，发射率和反射率都是不变的。相反地，如果氧化结构的缝隙很小，比如氧化铬镀层，此时短波可以渗透，而长波则不行。随着氧化层变厚，渐渐能够吸收所有的波长，则其发射率值在各种波长下都是不变的。比如薄的胶片表面具有非常细致的氧化层，很容易把它看成是透明的，因此这些镀层在影响其表面纹理的同时，也可将其看成是可选择型发射体。</description></item><item><title>红外测温原理</title><link>https://PyuStudio.github.io/en/posts/thermometer/post1/</link><pubDate>Wed, 08 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post1/</guid><description>自然界中的物体只要其温度高于绝对零度，就会不断地向外辐射能量。因此，理论上只要找到这些物体辐射能量与温度的对应关系并收集起来，经过一定的处理后，就可以得到与目标辐射分布相对应的热图像。
+另外，表面纹理和氧化度的变化同样会引起基于波长的发射率变化。如果氧化结构的表面缝隙大于红外波长，比如氧化铁表面就显得很粗糙，其发射率相对较高，并且用小于此结构缝隙的所有波长进行测量时，发射率和反射率都是不变的。相反地，如果氧化结构的缝隙很小，比如氧化铬镀层，此时短波可以渗透，而长波则不行。随着氧化层变厚，渐渐能够吸收所有的波长，则其发射率值在各种波长下都是不变的。比如薄的胶片表面具有非常细致的氧化层，很容易把它看成是透明的，因此这些镀层在影响其表面纹理的同时，也可将其看成是可选择型发射体。
+可选择型发射体 红外能是一种电磁能，就像可见光、无线电波和X射线。如果在胸口打上一束光，它不能穿过，而如果是X射线就能够穿过。光与X射线的唯一区别就在于波长。所以通过改变波长，有些物体会变得更加透明或更加不透明，玻璃就是一个很好的例子。玻璃在短波下是透明的，但在波长大于4.8mm的长波下则是不透明的。也就是说，在短波下玻璃的发射率更低。而因其在长波下是不透明的，因而此时具有更高的发射率。玻璃的发射率也随着波长的改变而改变，在6.6-8.2mm的波长下，玻璃是高度不透明和高度低反射的。这一波段也是玻璃具有最高的发射率值和最类似于黑体材料的波段。
+薄的塑料胶片是最典型的可选择型发射体。这种材料是由一长串氢和碳原子链组成的，这一可重复的统一的分子结构使得分子和原子以一个均匀的频率和谐地振动。与这一振动频率一致的红外波长被塑料材料优先吸收（不是反射或穿透）；另一方面，这一材料发射出的红外能首先是与振动频率一致的波长。当我们观察一个塑料夹层带时，它是透明的。但如果用一个与振动频率一致的3.43mm长度的波来测量，这个夹层带则是完全不透明的。当测量一个可选择型发射体的温度时，选择与一个强的发射波段一致的波长是至关重要的。在这种波长下，红外发射最为接近黑体条件，该材料也具有最高的不透明度和最低的反射率。可选择型发射体的另一些例子是所有的气体和所有的高透明材料。许多晶体材料，比如硅和陶瓷也是可选择型发射体。统一的分子结构使这些材料具有如上所述的发射率特性。 薄膜镀层也可以看成是可选择型发射体。在金属工业领域，金属薄板经常会被镀上一层薄膜。油基漆、水基漆、机油和腊是最为常见的涂在金属外部的镀层，它们都可以看作是可选择型发射体。这些材料在有些波长下是高度透明的，在另一些波长下则是高度不透明和低反射的。镀层的发射率在很大程度上取决于波长。一个红外测温仪的最佳波长应该能够随着镀层材料、镀层厚度、所需温度范围，以及对镀层的观测和穿过镀层观测的需求的变化而变化。
+如何用简单的方法来搞定发射率！ 各种物体表面的发射率是由物体表面的材质决定的，是否您在使用热像仪测量不同材质物体表面温度时，尤其是光亮的金属或非金属表面，陷入解决发射率的困境了呢？如果是，不用急，小编教你如何用简单的方法来搞定发射率！
+表面可处理之绝缘胶带法 适用场合：适用于被测目标相对比较大，温度较低（小于100℃），要求测试后不改变原目标表面状况的场合，例如各种散热模块、光洁器件表面、金属表面等</description></item><item><title>红外测温原理</title><link>https://PyuStudio.github.io/en/posts/thermometer/post1/</link><pubDate>Wed, 08 Dec 2021 08:06:25 +0600</pubDate><guid>https://PyuStudio.github.io/en/posts/thermometer/post1/</guid><description>自然界中的物体只要其温度高于绝对零度，就会不断地向外辐射能量。因此，理论上只要找到这些物体辐射能量与温度的对应关系并收集起来，经过一定的处理后，就可以得到与目标辐射分布相对应的热图像。
 一般将物体辐射出的波长在0.76μm-1000μm的电磁波定义为红外光波。将红外光按照波长分为四个波段：近红外(0.75μm～3.0μm)；中红外(3.0μm～6.0μm)；长波红外（6.0μm～15μm)和极远红外波段(15μm～1000μm)。研究发现，红外辐射对大气的穿透性和波长有很大关系，只有几个特定波段的红外辐射能够较好的穿透大气，研究人员将这几个特定的波段称为“大气窗口”，主要的大气窗口包括2μm -2.6μm，3μm～6μm和8μm～14μm。
 图为普朗克曲线
 红外热成像技术就是在利用红外辐射的“大气窗口”的波段进行成像。目前在红外成像领域研究较多的是采用中波红外（3μm～5μm）和长波红外（8μm～14μm）两个波段进行探测，将这些波段的辐射转换为人眼可观测并可供测量分析的图像数据。
