@@ -13,28 +13,55 @@ section:
 skills:
 - name: 硬件设计
   logo: /images/sections/skills/kubernetes.png
-  summary: "具有自主设计高性能模拟电路和数字电路的能力"
-  url: "https://kubernetes.io/"
+  summary: >
+    * 高性能模拟电路设计及调试
+    
+    * 高速数字电路设计及调试
+  
 
-- name: 8051 & C51
+- name: MCU
   logo: /images/sections/skills/go.png
-  summary: "多年8051开发经验，精通C51语言"
-  url: "https://golang.org/"
+  summary: >
+    * 多年8051开发经验，精通C51语言
+    
+    * 精通Arm底层结构，特别擅长STM32系列单片机的开发
 
-- name: ARM & STM32
+- name: 跨平台开发
   logo: /images/sections/skills/cloud.png
-  summary: "精通Arm底层结构，特别擅长STM32系列单片机的开发"
+  summary: >
+   * 熟练使用PyQt5开发基于Windows平台的桌面应用
+   
+   * 熟练使用C或python开发基于Linux平台的程序。
+   
+   * 熟练使用Flutter开发Mobile App。
+
+- name: C & C++
+  logo: /images/sections/skills/c++.png
+  summary: >
+    * 具有二十多年的C，C++开发经验。
+    
+    * 掌握多款流行数据库，例如Mysql， MangoDB等。
+    
+    * 熟练掌握多线程编程技术。
+    
+    * 熟练掌握网络编程技术，具有丰富的高负载服务软件的编写经验。
 
 - name: Python
-  logo: /images/sections/skills/docker.svg
-  summary: "具有多年的python开发经验，可熟练的使用Python完成从算法验证到桌面应用再到物联网开发"
-  url: "https://www.docker.com/"
-
-- name: Linux
   logo: /images/sections/skills/linux.png
-  summary: "多年linux平台开发经验"
+  summary: >
+    * 具有十多年的Python开发经验。
+    
+    * 熟练掌握python的常见内置库。
+    
+    * 熟练掌握python的网络编程框架，例如Flask等。
+    
+    * 熟练使用PyQt5进行桌面应用开发。
+    
+    * 熟悉Tensorflow等机器学习的模型，能够根据软件需求设计机器学习的模型并对其进行训练。
 
-- name: Git
+- name: Git & 项目管理
   logo: /images/sections/skills/git.png
-  summary: "非常重视开发过程中的文档管理和软件版本管理，熟练运用Git等工具管理开发过程中的每一个点滴"
-  url: "https://git-scm.com/"
+  summary: >
+    * 具有二十多年的SCM经验，熟练使用Git等SCM工具。
+    
+    * 具有多个成功的项目经验，能够在项目周期内完成项目任务的分解、进度跟进及整合等任务。

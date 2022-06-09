@@ -6,10 +6,10 @@ theme: "toha"
 # Manage languages
 # For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
 languages:
-  en:
-    contentDir: content/en
-    languageName: English
-    weight: 1
+#  en:
+#    contentDir: content/en
+#    languageName: English
+#    weight: 1
   zh-cn:
     contentDir: content/zh-cn
     languageName: 简体中文

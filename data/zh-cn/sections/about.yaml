@@ -18,7 +18,14 @@ designation: 一个致力于嵌入式软硬件开发的工作室
 # resume: "files/resume.pdf"
 
 # a summary about you
-summary: '本工作室擅长软硬件开发，具有全栈软件开发能力，有多个成功案例。'
+summary: >
+  本工作室聚焦于嵌入式系统的软硬件开发，具有多个成功案例。
+  
+   本工作室同时具有全栈开发能力。在嵌入式软件开发之外，本工作室还具有网站、桌面应用、移动应用开发能力。所以，在构建一个复杂的系统上，我们更具有优势。例如，在[红外测温模块](/posts/thermometer/elim/)项目中，我们同时完成了测温模块软硬件、校准设备软硬件、校准桌面应用和校准服务器软件的开发。
+  
+  
+  本工作室由数位经验丰富的工程师组成。他们的平均从业时间超过20年。
+  
 
 # your social links
 # give as many as you want. use font-awesome for the icons.

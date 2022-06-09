@@ -11,11 +11,11 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: Example Co.
+    name: Pyu Studio.
     url: "https://www.example.com"
-    location: Dhaka Branch
+    location: Shanghai, China
     # company overview
-    overview: Example Co. is a widely recognized company for cloud-native development. It builds tools for Kubernetes.
+    overview: Pyu Studio is a small studio runs by myself. It focuses on the development of embeded system.
   positions:
   - designation: Senior Software Engineer
     start: Nov 2019
@@ -23,34 +23,30 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
-
-  - designation: Junior Software Engineer
-    start: Nov 2017
-    end: Oct 2019
-    responsibilities:
-    - Implement and test xyz feature for abc tool.
-    - Support client for abc tool.
-    - Learn k,d,w technology for xyz.
-
+    - Design and develop infrared thermometer and its calibration system.
+    - Design and develop system response analyser.
+  
 - company:
-    name: PreExample Co.
+    name: 益盟软件
     url: "https://www.example.com"
-    location: Nowhere
-    overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
+    location: Shanghai, China
+    overview: 益盟软件是一家中国头部的股票实时行情提供商。
   positions:
-  - designation: Software Engineer
+  - designation: Senior C/C++ Software Engineer
+    start: September 2015
+    end: December 2019
+    responsibilities:
+    - 开发维护客户登录系统。该客户登录系统是使用C++编程语言编写，运行在Windows Server上。
+    - 开发维护股票实时行情服务软件。该软件是使用C语言编写，运行在在Linux Server上。
+  - designation: Senior Andorid Software Engineer
     start: March 2016
     end: May 2017
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
+    - 开发新版Android Client。
+    - 维护老版Android Client。 
 
 - company:
-    name: Intern Counting Company (ICC).
+    name: 
     url: "https://www.example.com"
     location: Intern Land
     overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
