@@ -5,7 +5,7 @@ description: Sample post with multiple images, embedded video ect.
 menu:
   sidebar:
     name: 红外测温模块
-    identifier: elim
+    identifier: elim_module
     parent: thermometer
     weight: 10
 hero: images/forest.jpg
