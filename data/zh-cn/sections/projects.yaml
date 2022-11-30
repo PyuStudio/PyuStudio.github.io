@@ -57,4 +57,23 @@ projects:
     该仪器与常见的分析仪（例如bode100）比，具有更高的零敏度和准确度。
   tags: ["STM32", "python"]
 
+- name: 足印英语
+  logo: /images/sections/projects/tensorflow.png
+  # role: Developer
+  # timeline: "Jun 2018 - Present"
+  # repo: https://github.com/tensorflow/tensorflow
+  url: "/posts/python/flask/"
+  summary: >
+  
+    《足印英语》是一款学习英语的微信小程序。
+
+    
+    在本项目中，我们在前端采用H5实现小程序的开发；在后端采用Python+Flask开发，并使用Docker进行项目部署。这是一个全栈项目。
+
+
+    在这个项目中，我们使用了pyTorch实现了对用户复读效果的评分功能，提高了用户的交互性。
+    
+    在实际应用中，这个小程序的英语学习效果非常好。
+    
+  tags: ["python"]
 
